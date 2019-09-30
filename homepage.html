@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+	<title>Project Login</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/font.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<html>
+<body>
+
+	<center><img src="images/logo.png" style="width: 15%"></center>
+	<p class="font" style="text-align: center; font-size: 50px">Project Login</p>
+
+	<div class="row">
+		<div class="column">
+		  <div class="card">
+			<img src="images/spaceinvaders.png" style="width: 50%">
+			<br>
+			<input class="font" placeholder="Name" id="spaceInvadersMemberName" style=" width: 50%;
+			padding: 12px 20px;
+			margin: 20px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;">
+			<br>
+			<input class="font" placeholder="CIN number" id="spaceInvadersMemberCIN" style=" width: 50%;
+			padding: 12px 20px;
+			margin: 20px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;">
+			<br>
+			<button class="btn success" id="space_invaders" onclick="spaceinvaders()">Check In</button>
+		  </div>
+		</div>
+	  
+		<div class="column">
+		  <div class="card">
+			<img src="images/accordlogoname.png" style="width: 24%">
+			<br>
+			<input class="font" placeholder="Name" id="accordMemberName" style=" width: 50%;
+			padding: 12px 20px;
+			margin: 20px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;">
+			<br>
+			<input class="font" placeholder="CIN number" id="accordMemberCIN" style=" width: 50%;
+			padding: 12px 20px;
+			margin: 20px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;">
+			<br>
+			<button class="btn success" id="space_invaders" onclick="accord()">Check In</button>
+		  </div>
+		</div>
+		</div>
+		</div>
+	  
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+	 <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyAZVdTz_TmoSoT5BSy_AC8O3h29hvbqcMg",
+  authDomain: "acm-attendance-web-app.firebaseapp.com",
+  databaseURL: "https://acm-attendance-web-app.firebaseio.com",
+  projectId: "acm-attendance-web-app",
+  storageBucket: "acm-attendance-web-app.appspot.com",
+  messagingSenderId: "801625207939",
+  appId: "1:801625207939:web:28301d56fd3d9d4e8997b6"
+	};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+
+</body>
+</html>
