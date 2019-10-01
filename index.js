@@ -4,13 +4,13 @@ function spaceinvaders(){
 
 	var spaceinvadersCIN = document.getElementById("spaceInvadersMemberCIN").value;
 	var spaceInvadersName = document.getElementById("spaceInvadersMemberName").value;
-	var spaceInvadersSecretCode = document.getElementById("spaceInvadersSecretCode").value;
+	// var spaceInvadersSecretCode = document.getElementById("spaceInvadersSecretCode").value;
 
-	if(spaceInvadersName.length && spaceinvadersCIN.length && spaceInvadersSecretCode.length != 0){
+	if(spaceInvadersName.length && spaceinvadersCIN.length != 0){
 		db.collection("Space Invaders").doc().set({
 			name:spaceInvadersName,
 			cin:spaceinvadersCIN,
-			code:spaceInvadersSecretCode
+			// code:spaceInvadersSecretCode
 		})
 		.then(function(docRef) {
 			window.alert("Check In Successful")
@@ -24,13 +24,13 @@ function spaceinvaders(){
 function accord(){
 	var accordMemberCIN = document.getElementById("accordMemberCIN").value;
 	var accordMemberName = document.getElementById("accordMemberName").value;
-	var accordSecretCode = document.getElementById("accordSecretCode").value;
+	// var accordSecretCode = document.getElementById("accordSecretCode").value;
 
-	if(accordMemberName.length && accordMemberCIN && accordSecretCode != 0){
+	if(accordMemberName.length && accordMemberCIN != 0){
 		db.collection("Accord").doc().set({
 			name:accordMemberName,
 			cin:accordMemberCIN,
-			code:accordSecretCode
+			// code:accordSecretCode
 		})
 		.then(function(docRef) {
 			window.alert("Check In Successful")
