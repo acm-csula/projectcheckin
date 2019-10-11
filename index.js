@@ -13,7 +13,8 @@ function spaceinvaders(){
 			// code:spaceInvadersSecretCode
 		})
 		.then(function(docRef) {
-			window.alert("Check In Successful")
+			window.alert("Check In Successful");
+			clearSpaceInvaders();
 		})	
 	}
 	else{
@@ -31,12 +32,24 @@ function accord(){
 			name:accordMemberName,
 			cin:accordMemberCIN,
 			// code:accordSecretCode
+
 		})
 		.then(function(docRef) {
-			window.alert("Check In Successful")
+			window.alert("Check In Successful");
+			clearAccord();
 		})
 	}
 	else{
 		window.alert("All fields are required")
 	}
+}
+
+function clearAccord(){
+	document.getElementById('accordMemberCIN').value = '';
+	document.getElementById('accordMemberName').value = '';
+}
+
+function clearSpaceInvaders(){
+	document.getElementById('spaceInvadersMemberCIN').value = '';
+	document.getElementById('spaceInvadersMemberName').value = '';
 }
