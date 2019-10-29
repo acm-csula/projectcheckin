@@ -53,3 +53,19 @@ function clearSpaceInvaders(){
 	document.getElementById('spaceInvadersMemberCIN').value = '';
 	document.getElementById('spaceInvadersMemberName').value = '';
 }
+
+const list_div_spaceInvaders = document.querySelector("#list_div_spaceInvaders");
+
+db.collection("Space Invaders").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+			list_div_spaceInvaders.innerHTML += "<div class='list-item-spaceInvaders'><h3>" + doc.data().name + "\n" + doc.data().cin + "</h3></div>"
+        });
+});
+
+const list_div_accord = document.querySelector("#list_div_accord");
+
+db.collection("Accord").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+			list_div_accord.innerHTML += "<div class='list-item-accord'><h3>" + doc.data().name + "\n" + doc.data().cin + "</h3></div>"
+        });
+});
